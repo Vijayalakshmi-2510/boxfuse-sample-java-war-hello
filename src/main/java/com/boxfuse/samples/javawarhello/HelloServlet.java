@@ -8,6 +8,6 @@ import javax.servlet.http.HttpServlet;
 public class HelloServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
-        System.out.println("Hello im pulling code from github to jenkins: You should see this in the Instance Logs :-)");
+        System.out.println("Hello im triggering the changes from github to jenkins: You should see this in the Instance Logs :-)");
     }
 }
