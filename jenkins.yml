@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        GIT_REPO = 'https://github.com/shanvid22/boxfuse-sample-java-war-hello.git'
+        GIT_REPO = 'https://github.com/Vijayalakshmi-2510/boxfuse-sample-java-war-hello.git'
         BRANCH = 'master'
         BUILD_TOOL = 'mvn'
         TOMCAT_PATH = '/opt/tomcat/webapps'
@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh "cp -r /var/lib/jenkins/workspace/pipeline1/target/*.war ${TOMCAT_PATH}/"
+                    sh "cp -r $WORKSPACE/target/*.war ${TOMCAT_PATH}/"
                 }
             }
         }
